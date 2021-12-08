@@ -1268,8 +1268,8 @@ if (text.includes("placa"))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXECUTADO\x1b[1;37m]', time, color(command), 'do amigo', color(sender.split('@')[0]), 'No grupo', color(groupName), 'Artigo :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECEBIDO\x1b[1;37m]', time, color('Menssagem'), 'do amigo', color(sender.split('@')[0]), 'No grupo', color(groupName), 'Artigo :', color(args.length))
 			switch(command) {
-				case 'menu':
-	            case 'help':
+		  case 'help':
+                  case 'menu':
 	            	uptime = process.uptime ()
                    var setP = fs.readFileSync('./src/zoro.png')
                    client.sendMessage(from, setP, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Bem vindo ao menu do Zoro⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
